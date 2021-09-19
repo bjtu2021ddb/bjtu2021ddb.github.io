@@ -6,15 +6,15 @@ const routes = [
   {
     path: "/",
     exactPath: true,
+    component: POIEditor,
+  },
+  {
+    path: "/poi/list",
     component: POIList,
   },
   {
     path: "/poi/edit/:objectId",
     component: POIEdit,
-  },
-  {
-    path: "/poi/editor",
-    component: POIEditor,
   },
 ];
 
