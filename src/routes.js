@@ -4,7 +4,8 @@ import POIList from "./pages/POIList";
 
 const routes = [
   {
-    path: "/poi/list",
+    path: "/",
+    exactPath: true,
     component: POIList,
   },
   {
