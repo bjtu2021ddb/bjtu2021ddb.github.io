@@ -1,2 +1,7 @@
 # bjtu2021ddb.github.io
-bjtu 导航功能网站
+
+- 官网的三种展示形式
+
+1. h5
+2. android
+3. electron
