@@ -15,7 +15,7 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
-  mainWindow.loadURL("https://bjtu2021ddb.github.io/");
+  mainWindow.loadURL("https://bjtu2021ddb.github.io");
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

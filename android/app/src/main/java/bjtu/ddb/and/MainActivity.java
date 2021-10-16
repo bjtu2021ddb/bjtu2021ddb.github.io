@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 .useDefaultIndicator()
                 .createAgentWeb()
                 .ready()
-                .go("https://bjtu2021ddb.github.io/");
+                .go("https://bjtu2021ddb.github.io/bjtu2021ddb");
     }
 
     @Override
@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-
         if (mAgentWeb.handleKeyEvent(keyCode, event)) {
             return true;
         }
