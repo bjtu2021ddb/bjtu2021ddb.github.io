@@ -4,4 +4,4 @@
 
 1. h5
 2. android
-3. electron
+3. desktop-electron
