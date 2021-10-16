@@ -6,8 +6,10 @@ declare global {
   }
 }
 
-// 将你的环境 Id 填写到此处
-window._tcbEnv = window._tcbEnv || {}
+window._tcbEnv = {
+  TCB_ENV_ID: 'bjtu-be-6gt3fewhaecd6726',
+  TCB_REGION: 'ap-shanghai'
+}
 export const envId = window._tcbEnv.TCB_ENV_ID
 export const region = window._tcbEnv.TCB_REGION
 

@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { getApp } from '../../tcb'
 import './index.css'
 
 export default function Hello() {
-  const app = getApp();
-  const [callFunctionResult, setCallFunctionResult] = useState("");
+  const app = getApp()
+  const [callFunctionResult, setCallFunctionResult] = useState('')
 
   const callFunction = async () => {
     try {
       const res = await app.callFunction({
-        name: "helloworld",
+        name: 'helloworld',
         data: {
-          foo: "bar",
-        },
-      });
-      setCallFunctionResult(JSON.stringify(res));
+          foo: 'bar'
+        }
+      })
+      setCallFunctionResult(JSON.stringify(res))
     } catch (e) {
-      setCallFunctionResult(e.message);
+      setCallFunctionResult(e.message)
     }
-  };
+  }
 
   return (
     <div className="hello">
@@ -28,6 +28,7 @@ export default function Hello() {
           <h2>
             通过
             <a
+              rel="noopener noreferrer"
               href="https://cloud.tencent.com/document/product/876/46177"
               target="_blank"
             >
@@ -43,8 +44,8 @@ export default function Hello() {
           <a
             href="/#"
             onClick={(e) => {
-              e.preventDefault();
-              callFunction();
+              e.preventDefault()
+              callFunction()
             }}
           >
             调用 hello world 云函数
@@ -79,5 +80,5 @@ export default function Hello() {
         />
       </a>
     </div>
-  );
+  )
 }
