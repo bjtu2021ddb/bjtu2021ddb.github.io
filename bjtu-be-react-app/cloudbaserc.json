@@ -1,17 +1,20 @@
 {
   "version": "2.0",
-  "envId": "bjtu-be-6gt3fewhaecd6726",
+  "envId": "bjtu-be-react-5gyzo6z7482d9c46",
   "$schema": "https://framework-1258016615.tcloudbaseapp.com/schema/latest.json",
   "functionRoot": "cloudfunctions",
   "framework": {
-    "name": "react-custom",
+    "name": "bjtu-be-react-app",
     "plugins": {
       "client": {
         "use": "@cloudbase/framework-plugin-website",
         "inputs": {
           "buildCommand": "npm run build",
           "outputPath": "build",
-          "cloudPath": "/react-custom"
+          "cloudPath": "/bjtu-be-react-app",
+          "envVariables": {
+            "REACT_APP_ENV_ID": "{{env.ENV_ID}}"
+          }
         }
       },
       "server": {
@@ -20,11 +23,11 @@
           "functionRootPath": "cloudfunctions",
           "functions": [
             {
-              "name": "custom-app",
+              "name": "helloworld",
               "timeout": 5,
               "envVariables": {},
               "runtime": "Nodejs10.15",
-              "memory": 128,
+              "memory": 256,
               "aclRule": {
                 "invoke": true
               }
