@@ -5,3 +5,4 @@
 1. h5
 2. android
 3. desktop-electron
+4. code-playground
