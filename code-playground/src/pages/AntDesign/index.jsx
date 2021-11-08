@@ -10,4 +10,5 @@ class AntDesign extends React.Component {
     );
   }
 }
+
 export default AntDesign;

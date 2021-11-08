@@ -1,5 +1,6 @@
 import AntDesign from "@/pages/AntDesign";
 import Home from "@/pages/Home";
+import Immutability from "@/pages/Immutability";
 import NoFound from "@/pages/NoFound";
 
 const routes = [
@@ -15,6 +16,12 @@ const routes = [
     title: "Ant Design",
     path: "antd",
     element: AntDesign,
+  },
+  {
+    key: "immutable",
+    title: "Immutability Helper",
+    path: "immutable",
+    element: Immutability,
   },
   {
     path: "*",
