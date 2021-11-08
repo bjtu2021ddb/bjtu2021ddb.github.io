@@ -1,6 +1,6 @@
-import React from "react";
-import { Button, Space, Dropdown, Menu } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
+import { Button, Dropdown, Menu, Space } from "antd";
+import React from "react";
 
 class ButtonComponent extends React.Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class ButtonComponent extends React.Component {
   };
 
   render() {
-    const { loading, menuItems } = this.state;
+    const { loading } = this.state;
 
     return (
       <div className="container">

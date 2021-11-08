@@ -1,16 +1,40 @@
+import HeadLayout from "@/layouts/HeadLayout";
+import { ButtonComponent, GridComponent } from "@/pages/AntDesign";
+import Immutability from "@/pages/Immutability";
+import NoFound from "@/pages/NoFound";
 import { BrowserRouter as Router, useRoutes } from "react-router-dom";
-import initRoutes from "./routes";
 
 const App = () => {
-  const routes = useRoutes(
-    initRoutes.map((route) => {
-      return {
-        path: route.path,
-        exact: route.exact,
-        element: <route.element />,
-      };
-    })
-  );
+  const routes = useRoutes([
+    {
+      path: "antd",
+      element: <HeadLayout title="Ant Design" />,
+      children: [
+        {
+          path: "button",
+          element: <ButtonComponent />,
+        },
+        {
+          path: "grid",
+          element: <GridComponent />,
+        },
+      ],
+    },
+    {
+      path: "immutable",
+      element: <HeadLayout title="Immutability Helper" />,
+      children: [
+        {
+          index: true,
+          element: <Immutability />,
+        },
+      ],
+    },
+    {
+      path: "*",
+      element: <NoFound />,
+    },
+  ]);
   return routes;
 };
 
