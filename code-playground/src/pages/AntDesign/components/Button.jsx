@@ -31,6 +31,7 @@ class ButtonComponent extends React.Component {
     return (
       <div className="container">
         <Space direction="vertical">
+          {/* 5种类型 primay, defalut, dashed, text, link */}
           <Space>
             <Button type="primary">Primary Button</Button>
             <Button type="default">Defalut Button</Button>
@@ -40,10 +41,12 @@ class ButtonComponent extends React.Component {
           </Space>
 
           <Space>
+            {/* icon 和 shape */}
             <Button type="primary" shape="circle" icon={<SearchOutlined />} />
           </Space>
 
           <Space>
+            {/* loading */}
             <Button
               type="primary"
               loading={loading}
@@ -60,12 +63,14 @@ class ButtonComponent extends React.Component {
           </Space>
 
           <Space>
+            {/* Dropdown.Button overlay 是 Menu */}
             <Dropdown.Button type="defalut" overlay={this.renderMenu()}>
               Actions
             </Dropdown.Button>
           </Space>
 
           <Space>
+            {/* 4种属性 danger, ghost, loading, disabled */}
             <Button type="primary" disabled>
               Disabled Button
             </Button>
