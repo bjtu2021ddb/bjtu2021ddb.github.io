@@ -1,9 +1,33 @@
 import React from "react";
-import { Button, Space } from "antd";
+import { Button, Space, Dropdown, Menu } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 
 class ButtonComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: false,
+    };
+  }
+
+  renderMenu() {
+    const menu = (
+      <Menu onClick={this.handleMenuClick}>
+        <Menu.Item key="1">1st item</Menu.Item>
+        <Menu.Item key="2">2nd item</Menu.Item>
+        <Menu.Item key="3">3rd item</Menu.Item>
+      </Menu>
+    );
+    return menu;
+  }
+
+  handleMenuClick = (menuItem) => {
+    console.log(menuItem);
+  };
+
   render() {
+    const { loading, menuItems } = this.state;
+
     return (
       <div className="container">
         <Space direction="vertical">
@@ -17,6 +41,43 @@ class ButtonComponent extends React.Component {
 
           <Space>
             <Button type="primary" shape="circle" icon={<SearchOutlined />} />
+          </Space>
+
+          <Space>
+            <Button
+              type="primary"
+              loading={loading}
+              icon={<SearchOutlined />}
+              onClick={() => {
+                this.setState({ loading: !loading });
+                setTimeout(() => {
+                  this.setState({ loading: false });
+                }, 3000);
+              }}
+            >
+              Search
+            </Button>
+          </Space>
+
+          <Space>
+            <Dropdown.Button type="defalut" overlay={this.renderMenu()}>
+              Actions
+            </Dropdown.Button>
+          </Space>
+
+          <Space>
+            <Button type="primary" disabled>
+              Disabled Button
+            </Button>
+            <Button type="primary" ghost>
+              Ghost Button
+            </Button>
+            <Button type="default" danger>
+              danger Button
+            </Button>
+            <Button type="primary" loading>
+              Loading...
+            </Button>
           </Space>
         </Space>
       </div>
