@@ -1,11 +1,11 @@
-import { Button } from "antd";
+import ButtonComponent from "./components/Button";
 import React from "react";
 
 class AntDesign extends React.Component {
   render() {
     return (
-      <div className="AntDesign">
-        <Button type="primary">antd</Button>
+      <div className="wrapper">
+        <ButtonComponent />
       </div>
     );
   }

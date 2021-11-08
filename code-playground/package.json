@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.0",
+    "less": "^4.1.2",
     "vite": "^2.6.4"
   }
 }
