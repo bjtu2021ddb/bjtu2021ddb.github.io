@@ -2,10 +2,11 @@ import HeadLayout from "@/layouts/HeadLayout";
 import { ButtonComponent, GridComponent } from "@/pages/AntDesign";
 import Immutability from "@/pages/Immutability";
 import NoFound from "@/pages/NoFound";
-import { BrowserRouter as Router, useRoutes } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
+import "./App.less";
 
 const App = () => {
-  const routes = useRoutes([
+  const element = useRoutes([
     {
       path: "antd",
       element: <HeadLayout title="Ant Design" />,
@@ -35,15 +36,8 @@ const App = () => {
       element: <NoFound />,
     },
   ]);
-  return routes;
+
+  return <div className="wrapper">{element}</div>;
 };
 
-const AppWrapper = () => {
-  return (
-    <Router>
-      <App />
-    </Router>
-  );
-};
-
-export default AppWrapper;
+export default App;
